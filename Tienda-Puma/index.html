@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Puma</title>
+    <style>
+        *{box-sizing:border-box}
+        body{font:14px Arial;margin:0;background:#f4f4f4}
+        header,nav{background:#000;color:#fff;padding:10px;display:flex;justify-content:space-between;align-items:center}
+        header div{display:flex;gap:8px;align-items:center}
+        nav{background:#222;display:block}
+        nav a{color:#fff;text-decoration:none;margin-right:12px}
+        .activo,.box h2,.card p{color:#ba2026;font-weight:bold}
+        .main{max-width:900px;margin:15px auto;padding:10px}
+        .box,.card{background:#fff;border:1px solid #ccc;padding:10px}
+        .box{margin-bottom:15px}
+        input,select,button,.btn{width:100%;padding:8px;margin:5px 0}
+        .btn{background:#ba2026;color:#fff;border:none;cursor:pointer;text-decoration:none;text-align:center;font-weight:bold}
+        .btn-sm{width:auto;padding:4px 8px;display:inline-block}
+        .grid{display:flex;flex-wrap:wrap;gap:10px}
+        .card{width:calc(25% - 8px);min-width:140px;text-align:center}
+        .card img{width:100%;height:80px;object-fit:contain}
+        .card h3{font-size:12px;margin:5px 0}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PUMA</h1>
+        <div>
+            <input type="text" placeholder="Buscar..." style="width:120px;margin:0">
+            <button class="btn btn-sm">Buscar</button>
+        </div>
+        <div>
+            <span>Hola, Identifícate</span>
+            <a href="registrate.html" class="btn btn-sm">Registrate</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" class="activo">Inicio</a>
+        <a href="#">Ropa</a>
+        <a href="#">Tenis</a>
+        <a href="#">Tacos</a>
+        <a href="#">Niños</a>
+        <a href="#">Accesorios</a>
+    </nav>
+
+    <div class="main">
+        <div class="box">
+            <h2>Realizar Pedido</h2>
+            <form action="guardar_pedido.php" method="POST">
+                <label>Producto:</label>
+                <select name="producto">
+                    <option value="Gorra Puma Ferrari">Gorra Puma Ferrari</option>
+                    <option value="Mochila Puma">Mochila Puma</option>
+                    <option value="Tenis Niños">Tenis Niños</option>
+                    <option value="Conjunto Niños">Conjunto Niños</option>
+                    <option value="Tacos Puma Azules">Tacos Puma Azules</option>
+                    <option value="Tacos Puma Rojos">Tacos Puma Rojos</option>
+                    <option value="Tenis Puma Morados">Tenis Puma Morados</option>
+                    <option value="Tenis Puma Café">Tenis Puma Café</option>
+                    <option value="Pantalón Puma">Pantalón Puma</option>
+                    <option value="Jersey Puma">Jersey Puma</option>
+                    <option value="Chamarra Puma">Chamarra Puma</option>
+                </select>
+
+                <label>Talla:</label>
+                <select name="talla">
+                    <option value="25 MX">25 MX</option>
+                    <option value="26 MX">26 MX</option>
+                    <option value="27 MX">27 MX</option>
+                    <option value="28 MX">28 MX</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+
+                <label>Cantidad:</label>
+                <input type="number" name="cantidad" value="1" min="1" required>
+
+                <button type="submit" class="btn">Enviar Pedido</button>
+            </form>
+        </div>
+
+        <h2 style="font-size:16px;margin:10px 0">Catálogo de Productos</h2>
+
+        <div class="grid">
+            <div class="card">
+                <img src="acc1.png" alt="Gorra Puma Ferrari">
+                <h3>Gorra Puma Ferrari</h3>
+                <p>$699.00</p>
+            </div>
+            <div class="card">
+                <img src="acc2.png" alt="Mochila Puma">
+                <h3>Mochila Puma</h3>
+                <p>$849.00</p>
+            </div>
+            <div class="card">
+                <img src="ni1.png" alt="Tenis Niños">
+                <h3>Tenis Niños</h3>
+                <p>$999.00</p>
+            </div>
+            <div class="card">
+                <img src="ni2.png" alt="Conjunto Niños">
+                <h3>Conjunto Niños</h3>
+                <p>$1,000.00</p>
+            </div>
+            <div class="card">
+                <img src="tac1.png" alt="Tacos Puma Azules">
+                <h3>Tacos Puma Azules</h3>
+                <p>$1,899.00</p>
+            </div>
+            <div class="card">
+                <img src="tac2.png" alt="Tacos Puma Rojos">
+                <h3>Tacos Puma Rojos</h3>
+                <p>$1,999.00</p>
+            </div>
+            <div class="card">
+                <img src="ten1.png" alt="Tenis Puma Morados">
+                <h3>Tenis Puma Morados</h3>
+                <p>$2,900.00</p>
+            </div>
+            <div class="card">
+                <img src="ten2.png" alt="Tenis Puma Café">
+                <h3>Tenis Puma Café</h3>
+                <p>$2,500.00</p>
+            </div>
+            <div class="card">
+                <img src="rop1.png" alt="Pantalón Puma">
+                <h3>Pantalón Puma</h3>
+                <p>$999.00</p>
+            </div>
+            <div class="card">
+                <img src="rop2.png" alt="Jersey Puma">
+                <h3>Jersey Puma</h3>
+                <p>$1,299.00</p>
+            </div>
+            <div class="card">
+                <img src="rop3.png" alt="Chamarra Puma">
+                <h3>Chamarra Puma</h3>
+                <p>$1,599.00</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
